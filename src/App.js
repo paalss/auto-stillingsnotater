@@ -11,7 +11,7 @@ function App() {
   // const defaultState = ``;
   const [input, setInput] = useState("");
   const [platform, setPlatform] = useState();
-  const [output, setOutput] = useState(["array", "barray"]);
+  const [output, setOutput] = useState({ originalinfo: ["array", "barray"] });
   const textEl = useRef(null);
 
   console.log(output);
@@ -57,15 +57,29 @@ function App() {
 
       // console.log(data);
 
-      console.log("nå endrer vi denne");
       setOutput((prev) => {
-        return { prev, generalInfo: data };
+        return { ...prev, generalInfo: data };
       });
 
       // const breakMultipleSpaces = input.split("    ");
       // console.log(breakMultipleSpaces);
     }
   }, [input, platform]);
+
+  const listExperience = useCallback(() => {
+    if (input.includes("års erfaring")) {
+      const phraseIndex = input.indexOf("års erfaring");
+      const lenght = 80;
+      const textWhereItsUsed = input.substr(phraseIndex - lenght, lenght * 2);
+      const textWhereItsUsedReplaced = textWhereItsUsed.replace(
+        "års erfaring",
+        "--> års erfaring <--"
+      );
+      setOutput((prev) => {
+        return { ...prev, experience: textWhereItsUsedReplaced };
+      });
+    }
+  }, [input]);
 
   // const eeeeeeeeeeeeee = useCallback(() => {
   //   if (input.includes()) {
@@ -76,7 +90,8 @@ function App() {
   const extractValuesFromInput = useCallback(() => {
     determinePlatform();
     listGeneralInfo();
-  }, [determinePlatform, listGeneralInfo]);
+    listExperience();
+  }, [determinePlatform, listGeneralInfo, listExperience]);
 
   useEffect(() => {
     extractValuesFromInput();
@@ -125,6 +140,7 @@ function App() {
           </div>
           <div>
             <h2>Erfaring</h2>
+            {output.experience && output.experience}
           </div>
         </div>
       </div>
