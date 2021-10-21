@@ -48,7 +48,11 @@ function App() {
       // console.log(metadataIndexes);
 
       const data = metadataIndexes.map((index) => {
-        return `**${breakLineBreaks[index]}:** ${breakLineBreaks[index + 1]}`;
+        return (
+          <>
+            <b>**{breakLineBreaks[index]}:**</b> {breakLineBreaks[index + 1]}
+          </>
+        );
       });
 
       // console.log(data);
