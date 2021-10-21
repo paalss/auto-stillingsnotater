@@ -57,43 +57,45 @@ function App() {
     }
   }, [input, platform]);
 
-  const listExperience = useCallback(() => {
-    if (input.includes("års erfaring")) {
-      const phraseIndex = input.indexOf("års erfaring");
-      let phraseIndexArray = [phraseIndex];
-      let newPhraseIsFound = true;
-      let count = 0;
-      while (newPhraseIsFound) {
-        const phraseIndex = input.indexOf(
-          "års erfaring",
-          phraseIndexArray[count] + 1
-        );
-        if (phraseIndex === -1) {
-          newPhraseIsFound = false;
-        } else {
-          phraseIndexArray = [...phraseIndexArray, phraseIndex];
-          count++;
+  const printInstancesOfPhrase = useCallback(
+    (phrase, dataGroup) => {
+      if (input.includes(phrase)) {
+        const phraseIndex = input.indexOf(phrase);
+        let phraseIndexArray = [phraseIndex];
+        let newPhraseIsFound = true;
+        let count = 0;
+        while (newPhraseIsFound) {
+          const phraseIndex = input.indexOf(
+            phrase,
+            phraseIndexArray[count] + 1
+          );
+          if (phraseIndex === -1) {
+            newPhraseIsFound = false;
+          } else {
+            phraseIndexArray = [...phraseIndexArray, phraseIndex];
+            count++;
+          }
         }
+        const data = phraseIndexArray.map((index) => {
+          const lenght = 90;
+          const textWhereItsUsed = input.substr(index - lenght, lenght * 2);
+          const textWhereItsUsedBeforeAndAfter = textWhereItsUsed.split(phrase);
+          return [
+            textWhereItsUsedBeforeAndAfter[0],
+            <>
+              <b>{phrase}</b>
+            </>,
+            textWhereItsUsedBeforeAndAfter[1],
+          ];
+        });
+        setOutput((prev) => {
+          const result = { ...prev, [dataGroup]: data };
+          return result;
+        });
       }
-      const data = phraseIndexArray.map((index) => {
-        const lenght = 90;
-        const textWhereItsUsed = input.substr(index - lenght, lenght * 2);
-        const textWhereItsUsedBeforeAndAfter =
-          textWhereItsUsed.split("års erfaring");
-        return [
-          textWhereItsUsedBeforeAndAfter[0],
-          <>
-            <b>års erfaring</b>
-          </>,
-          textWhereItsUsedBeforeAndAfter[1],
-        ];
-      });
-
-      setOutput((prev) => {
-        return { ...prev, experience: data };
-      });
-    }
-  }, [input]);
+    },
+    [input]
+  );
 
   // This code is contributed by avanitrachhadiya2155
 
@@ -106,8 +108,9 @@ function App() {
   const extractValuesFromInput = useCallback(() => {
     determinePlatform();
     listGeneralInfo();
-    listExperience();
-  }, [determinePlatform, listGeneralInfo, listExperience]);
+    printInstancesOfPhrase("års erfaring", "yearsExperience");
+    printInstancesOfPhrase("erfaring", "experience");
+  }, [determinePlatform, listGeneralInfo, printInstancesOfPhrase]);
 
   useEffect(() => {
     extractValuesFromInput();
@@ -155,14 +158,32 @@ function App() {
           </div>
           <div>
             <h2>Erfaring</h2>
+            {output.yearsExperience && <h3>Års erfaring</h3>}
+            {output.yearsExperience &&
+              output.yearsExperience.map((e, index) => {
+                return (
+                  <span key={index}>
+                    {index > 0 && <hr />}
+                    <p>
+                      {e.map((line, index) => {
+                        return <span key={index}>{line}</span>;
+                      })}
+                    </p>
+                  </span>
+                );
+              })}
+            {output.experience && <h3>Erfaring</h3>}
             {output.experience &&
               output.experience.map((e, index) => {
                 return (
-                  <p key={index}>
-                    {e.map((line, index) => {
-                      return <span key={index}>{line}</span>;
-                    })}
-                  </p>
+                  <span key={index}>
+                    {index > 0 && <hr />}
+                    <p>
+                      {e.map((line, index) => {
+                        return <span key={index}>{line}</span>;
+                      })}
+                    </p>
+                  </span>
                 );
               })}
           </div>
