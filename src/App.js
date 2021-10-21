@@ -71,12 +71,16 @@ function App() {
       const phraseIndex = input.indexOf("års erfaring");
       const lenght = 80;
       const textWhereItsUsed = input.substr(phraseIndex - lenght, lenght * 2);
-      const textWhereItsUsedReplaced = textWhereItsUsed.replace(
-        "års erfaring",
-        "--> års erfaring <--"
-      );
+      const textWhereItsUsedBeforeAndAfter = textWhereItsUsed.split("års erfaring")
+      const data = [
+        textWhereItsUsedBeforeAndAfter[0],
+        <>
+          <b>års erfaring</b>
+        </>,
+        textWhereItsUsedBeforeAndAfter[1],
+      ];
       setOutput((prev) => {
-        return { ...prev, experience: textWhereItsUsedReplaced };
+        return { ...prev, experience: data };
       });
     }
   }, [input]);
