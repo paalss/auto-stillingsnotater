@@ -14,7 +14,7 @@ function App() {
   const [output, setOutput] = useState({ originalinfo: ["array", "barray"] });
   const textEl = useRef(null);
 
-  console.log(output);
+  // console.log(output);
 
   const changehandler = () => {
     setInput(textEl.current.value);
@@ -30,9 +30,7 @@ function App() {
 
   const listGeneralInfo = useCallback(() => {
     if (platform === "Finn") {
-      // console.log(input);
       const breakLineBreaks = input.split("\n");
-      // console.log(breakLineBreaks);
 
       const metadata = [
         "Arbeidsgiver",
@@ -45,8 +43,6 @@ function App() {
         return breakLineBreaks.findIndex((element) => element === item);
       });
 
-      // console.log(metadataIndexes);
-
       const data = metadataIndexes.map((index) => {
         return (
           <>
@@ -55,35 +51,51 @@ function App() {
         );
       });
 
-      // console.log(data);
-
       setOutput((prev) => {
         return { ...prev, generalInfo: data };
       });
-
-      // const breakMultipleSpaces = input.split("    ");
-      // console.log(breakMultipleSpaces);
     }
   }, [input, platform]);
 
   const listExperience = useCallback(() => {
     if (input.includes("års erfaring")) {
       const phraseIndex = input.indexOf("års erfaring");
-      const lenght = 80;
-      const textWhereItsUsed = input.substr(phraseIndex - lenght, lenght * 2);
-      const textWhereItsUsedBeforeAndAfter = textWhereItsUsed.split("års erfaring")
-      const data = [
-        textWhereItsUsedBeforeAndAfter[0],
-        <>
-          <b>års erfaring</b>
-        </>,
-        textWhereItsUsedBeforeAndAfter[1],
-      ];
+      let phraseIndexArray = [phraseIndex];
+      let newPhraseIsFound = true;
+      let count = 0;
+      while (newPhraseIsFound) {
+        const phraseIndex = input.indexOf(
+          "års erfaring",
+          phraseIndexArray[count] + 1
+        );
+        if (phraseIndex === -1) {
+          newPhraseIsFound = false;
+        } else {
+          phraseIndexArray = [...phraseIndexArray, phraseIndex];
+          count++;
+        }
+      }
+      const data = phraseIndexArray.map((index) => {
+        const lenght = 90;
+        const textWhereItsUsed = input.substr(index - lenght, lenght * 2);
+        const textWhereItsUsedBeforeAndAfter =
+          textWhereItsUsed.split("års erfaring");
+        return [
+          textWhereItsUsedBeforeAndAfter[0],
+          <>
+            <b>års erfaring</b>
+          </>,
+          textWhereItsUsedBeforeAndAfter[1],
+        ];
+      });
+
       setOutput((prev) => {
         return { ...prev, experience: data };
       });
     }
   }, [input]);
+
+  // This code is contributed by avanitrachhadiya2155
 
   // const eeeeeeeeeeeeee = useCallback(() => {
   //   if (input.includes()) {
@@ -127,7 +139,6 @@ function App() {
           ></textarea>
         </div>
         <div className="flex column half-width">
-          {/* General info */}
           <div>
             <h2>Generell info</h2>
             <ul>
@@ -144,7 +155,22 @@ function App() {
           </div>
           <div>
             <h2>Erfaring</h2>
-            {output.experience && output.experience}
+            {output.experience &&
+              output.experience.map((e, index) => {
+                return (
+                  <p key={index}>
+                    {e.map((line, index) => {
+                      return <span key={index}>{line}</span>;
+                    })}
+                  </p>
+                );
+              })}
+          </div>
+          <div>
+            <h2>Kontaktperson</h2>
+          </div>
+          <div>
+            <h2>Påkrevd vedlegg</h2>
           </div>
         </div>
       </div>

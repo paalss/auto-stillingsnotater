@@ -5,142 +5,146 @@ Varslinger
 Ny annonse
 Meldinger
 Min FINN
-Jobb Ledige stillinger Rogaland Karmøy
-Er du som oss når det kommer til å synes det er spennende å jobbe med Angular, React eller Vue?
+Inaktiv
+Senior backend-utvikler til aID-teamet i Amedia
 
 Arbeidsgiver
-    Sysco AS
+    Amedia Utvikling AS
 Stillingstittel
-    Frontend-utvikler, Applikasjon&Utvikling
+    System utvikler
 Frist
-    Vi intervjuer fortløpende
+    Løpende
 Ansettelsesform
     Fast
 
-Motiveres du av å være en del av et godt faglig miljø og få muligheten til å videreutvikle deg ved å jobbe med dyktige kolleger og spennende kundeprosjekter? Er du som oss når det kommer til å synes det er spennende å jobbe med Angular, React eller Vue? Da må du lese videre!
+Hvorfor jobbe i aID-teamet?
 
-For vår Application Development avdeling i Haugesund ser vi etter deg som er engasjert i det du jobber med og er åpen for nye erfaringer. Søker du et uformelt miljø med through-the-roof engasjerte kollegaer, innflytelse og gode muligheter for utvikling av egen kompetanse og karriere? Da er vi en match for deg!
+I Amedia ID og Data jobber vi med produkter som påvirker over en million nordmenn hver dag - deriblant vår identitetsløsning, aID. Vår ambisjon er å utvikle aID til å bli den største og viktigste identitets- og innloggingsløsningen i Norge. En stor del av jobben vår er å lage en brukervennlig, personvernvennlig og trygg løsning for alle våre brukere og nettsteder.
 
-Om oss
-SYSCO er et solid og svært raskt voksende teknologiselskap, spesialisert i energibransjen og dedikert til å snu komplekse IT utfordringer til digitale suksesshistorier. Med over 270 ansatte og nesten 500 millioner i omsetning er vi et akkurat passe stort selskap, med muskler til å gjøre store ting samtidig som vi er lettbente, har lite byråkrati og høy grad av innflytelse. Vår drøm er å bygge et sagnomsust tech-selskap i Norden med en ustoppelig kultur og sterke verdier.
+aID-løsningene består av egenutviklede applikasjoner i en mikrotjenestearkitektur. De er moderne og godt oppdaterte og teamet sørger selv for forvaltning, videreutvikling, testing og utrulling av tjenestene. I dag inkluderer stacken vår apper basert på blant annet Java, Ruby, Go, Node.js og React/Redux, og vi baserer oss på Open Source-teknologier som Docker og Kubernetes for å kjøre tjenestene og Varnish som lastbalanserer.
 
-Hva møter du i rollen?
-Som Frontend-utvikler hos oss vil du få høy grad av innflytelse og mulighet til å påvirke. Ditt engasjement, erfaring og kompetanse vil få god plass til å forme og bidra til at vårt team utvikles ytterligere. Sammen skal vi jobbe kreativt og tverrfaglig for å løse viktige utfordringer i spennende prosjekter. Vil du bli med på denne reisen med oss?
+Det som motiverer oss som jobber her, er blant annet at:
 
-Sammen med et sterkt og kompetent team vil du utvikle webløsninger av høy kvalitet, og levere gode brukeropplevelser for kunder i meningsfulle bransjer hvor du følger prosjektene fra idè til implementering.
+    våre tjenester har en stor brukerbase, alt vi gjør påvirker mange mennesker
+    vi har stor variasjon når det kommer til teknologi og stor frihet innenfor vide rammer
+    vi er raske til å ta i bruk ny teknologi når det løser problemer mer effektivt enn den vi bruker fra før
+    det er svært gode muligheter for å påvirke både produkt, arkitektur og prosesser
+    det er enkelt og ubyråkratisk å kunne bidra der man selv føler at det trengs (applikasjoner/tjenester, arkitektur, infrastruktur, oppsett, overvåking, etc)
+    vi samarbeider i et tverrfaglig team som jobber sammen og tar vare på arbeidsmiljøet
 
-Vi vet at ingen utviklere er like, og at alle har sine styrker innenfor forskjellige områder. Vi gir deg mulighet til å påvirke hva slags prosjekter du deltar i, og hva slags roller du har i dem, slik at du kan utvikle deg i den retningen du vil. Vi inviterer til jevnlige sammenkomster i teamet der vi byr på både faglige workshops og sosiale events.
+...og alt dette selvsagt i tillegg til det faktum at jobben vi gjør bidrar til å holde lokaljournalistikken i live - som i sin tur er viktig for samfunnet og lokaldemokratiet!
 
-Hvem er du?
-Vi ser at vår suksess kommer av initiativ, samarbeid og involvering på tvers av fagmiljøer. Derfor ser vi etter deg som liker ansvar og selvstendighet, men samtidig er en lagspiller. Du setter pris på et arbeidsmiljø som preges av gode relasjoner og samarbeid – og her er du en aktiv bidragsyter. Du liker å inspirere, og la deg bli inspirert. Som Frontend-utvikler og konsulent vil du ha en sentral rolle i våre prosjekter, og vi ser for oss at dette er noe du kjenner deg igjen i:
+
+Hvem er vi på jakt etter?
+
+Vi leter etter deg som har jobbet i noen år og er komfortabel med back-end, har god kunnskap om Java rammeverk og holder deg oppdatert på ny teknologi. Selv om du kanskje har et favorittspråk eller to, ønsker du alltid å bruke det språket eller den teknologien som passer best til den aktuelle oppgaven. Erfaring med Linux er et pluss. (Humor kommer også godt med! :D)
+
+Arbeidsoppgaver:
+
+    Utvikle og videreutvikle aID-tjenestene
+    Forbedre arkitektur, prosesser og løsninger slik at vi sikrer en moderne, fleksibel og skalerbar løsning
+    Spre innsikt og dele din kompetanse - sammen bidrar vi til at teamet vokser faglig
+
+Ønskeliste erfaring og egenskaper:
+
+    Utdanning på bachelor- eller masternivå innen informatikk eller tilsvarende
+    Fra 3 års erfaring som backend- eller fullstackutvikler
+    God erfaring med Java (eventuelt GO, Ruby, Node.js), Spring Rammeverk og databaser
+    Opptatt av å lage solide løsninger som er vedlikeholdbare og fleksible
+    Evne til å være pragmatisk, prioritere og levere også når tidsfristene er stramme
+    Liker varierte og skiftende oppgaver, trives med nye utfordringer
+    Du er opptatt av å lære, har evne til å sette deg raskt inn i nye teknologier og du liker å diskutere kode
+    Nysgjerrig på ny og ukjent teknologi
+    Evne til å vurdere om språk/teknologier er godt egnet til å løse et gitt problem, både på kort og lang sikt
+
+Hvis du føler at dette traff veldig godt, men er usikker på kvalifikasjonene - ta kontakt likevel!
+
  
+Hos oss får du:
 
-    Erfaring med Anguar, React, Vue, eller lignende
-    God erfaring med JavaScript
-    God erfaring med HTML/CSS
-    Erfaring innenfor Git, NPM, Agile og REST
-    Aktiv innenfor ditt fagfelt og alltid oppdatert på de nyeste trendene og teknologiene – og nyvunnet læring deler du med glede.
+    Mange engasjerte kollegaer å samarbeide med, lære fra og lære til - for øyeblikket 13 utviklere i avdelingen og over 20 utviklere i vår søsteravdeling Utvikling, i tillegg til alt fra Data Scientists til BI-eksperter og UX-ere
+    Stor mulighet til å påvirke alle våre produkter og alle deler av utviklingsprosessen
+    Tid og budsjett til faglig påfyll
+    Konkurransedyktige betingelser og god balanse mellom jobb og privatliv
+    Moderne lokaler i Akersgata, midt i hjertet av Oslo
+    En glimrende kantine med varm mat hver dag :)
 
 
-I tillegg til overnevnte ser vi etter deg som har gode kommunikasjonsevner og skaper felles forståelse ved et transparent, enkelt og tydelig språk - og du kommuniserer godt på norsk og engelsk. Som oss liker du du å løse problemer, ikke oppgaver. Vi vil påstå at vi har god humor, men det er opp til deg å bedømme – vi ser uansett frem til å bli kjent med ditt bidrag her også!
+Om arbeidsgiveren:
+Amedia Utvikling er konsernets sentrale utviklingsmiljø med ansvar for både teknisk og
+innholdsmessig utvikling. Selskapet forvalter blant annet Amedias rammeverk for
+nettaviser, påloggingstjenesten aID, direktesport og konsernets eAviser.
 
-Hvorfor er det kult å jobbe i SYSCO?
-SYSCO har et internasjonalt teknologimiljø i verdensklasse med et team bestående av råe teknologiske superhelter fordelt på 8 kontorer i Norden, i tillegg til at vi er partner med ledende teknologiselskaper som Microsoft og Oracle. Vi er et uformelt selskap med kort vei til beslutninger og hvor det er store muligheter til å påvirke. Vi er svært opptatt av å gi tilbake til samfunnet med meningsfullt arbeid, og i år støtter vi blant annet Kripos for å bekjempe overgrepsrelaterte forbrytelser av barn på nettet. Vi har et stort mangfold med over 20 nasjonaliteter som bringer fantastiske kulturer, kunnskap og kompetanse inn i organisasjonen vår. Vi har fokus på å få flere kvinner inn i Tech-bransjen, noe vi jobber for sammen med ODA Nettverk, hvor vi er Platinum Partner.
+Fra Akersgata i Oslo sentrum jobber vi med 73 lokalaviser – fra Honningsvåg i nord til
+Tvedestrand i sør. I tillegg eier Amedia den riksdekkende Nettavisen. Til sammen når
+konsernets medier ut til 2,2 millioner nordmenn. Hver eneste uke.
 
-Med fleksibilitet i arbeidshverdagen gjør vi vårt beste for å legge til rette for en god balanse mellom jobb, familie og fritid.
+Stadig flere kjøper abonnement på våre aviser. Det er en tillit som forplikter. Derfor søker vi
+utviklere som skal være med på å utvikle nye, digitale tjenester som får journalistikken til å
+skinne. Det kan være ganske store ting: Mobilapper, personaliserte forsider, streaming av
+sportssendinger, infrastruktur eller nye arbeidsverktøy for journalister. Men også litt mindre ting, som å forbedre måten vi viser fram bildeserier på, eller muligheten til å motta nyhetsbrev med de viktigste nyhetene.
 
-Hva får du hos oss?
-Vi kan by på svært dyktige kollegaer, faglig utvikling og muligheten til å påvirke egen hverdag. Vi inviterer jevnlig til sammenkomster, her får du det beste fra begge verdener. Tech-talk og workshops gir oss alle et spennende læringsmiljø. Når anledningen byr seg, kombinerer vi også disse med god mat og drikke.
-Andre goodies du får hos oss:
+Amedia er landets største utgiver av lokale medier. Forretningsideen er den samme i dag som den alltid har vært: Journalistikken. Vi skal fortelle de små og store historiene som samler, engasjerer, og driver lokalsamfunnet fremover.
+
+Amedia Utvikling er et selskap i Amedia. Les mer her om hvordan det å være ansatt i Amedia.
+
+Kontakt Kjetil Ramdal; +4794139901 kjetil@vbemanning.no
  
+Om arbeidsgiveren
 
-    Gode muligheter for utvikling av egen kompetanse og karriere i en innovasjons- og kompetansedrevet organisasjon
-    Sosiale events
-    En flat struktur, stor frihet og rask vei til avgjørelser
-    Utfordrende og varierte prosjekter
-    Gode forsikringsordninger
-    Når det er tid for ferie kan vi også friste med mulighet til å booke en av våre leiligheter i Spania
-
-
-Vi ser frem til å høre fra deg!
+Veksthuset Bemanning AS er et rekrutteringsselskap med spesialkunnskap på personalutleie og rekruttering innen salg, produksjon, håndverk, ledelse, økonomi/regnskap, samt administrative funksjoner i offentlig og privat sektor. Selskapet, med hovedkontor i Oslo og avdelingskontor i Elverum, Hamar, Brumunddal, Trondheim, Otta og Vestfold, samarbeider tett med attraktive bedrifter i disse områdene. Mer informasjon på www.vbemanning.no
 
 Nettverk
-    Facebook LinkedIn 
+    Facebook LinkedIn Twitter 
 Sektor
     Privat
 Sted
-    Stølsmyr 22, 5542 Karmsund
+    Akersgata 34, 0180 Oslo
 Bransje
-    Konsulent og rådgivning,
-    IT,
     IT - programvare
 Stillingsfunksjon
-    IT utvikling / Front-end,
-    IT utvikling / App utvikler,
-    Konsulent
+    IT utvikling / Utvikler (generell)
 
-Nøkkelord
-
-Angular, React, Vue, Application Development, Front-end development
-Galleribilde 1 av 5
-
-(1/5)
-Sysco AS
+Veksthuset Bemanning AS
 Spørsmål om stillingen
 
 Kontaktperson
-    Christian Veigner
-Stillingstittel
-    Director of Application Development
+    Kjetil Ramdal
 Telefon
-    481 47 550 
+    941 39 901 
 
     Send melding
-
-Kontaktperson
-    Anette Holthe
-Stillingstittel
-    Recruitment Manager
-Telefon
-    416 61 481 
-Nettverk
-    LinkedIn 
-
-    Send melding
-
-Søk her
 
     Hjemmeside
-    Flere stillinger fra Sysco AS
 
-50 følger dette firmaet
-Stølsmyr 22, 5542 Karmsund
+341 følger dette firmaet
+Akersgata 34, 0180 Oslo
 Kart
 
 Stort kart Hybridkart Flyfoto
 Annonseinformasjon
-FINN-kode 	233354377
-Sist endret 	28. sep. 2021 08:33
+FINN-kode 	181679838
+Sist endret 	10. jun. 2020 14:52
 
 Rapporter annonse
-Lignende annonser
-Fullstack .NET-utvikler: Graduateprogram
-Betalt plassering
-EXPERIS AS
-Oslo • 3 uker siden
-Senior Software Developer (R&D)
-Seam AS
-Avaldsnes • 1 måned siden
-IT Engineer til et spennende globalt selskap
-International SOS (Medsite) AS
-Haugesund • 2 uker siden
-Overingeniør/Senioringeniør innen IKT
-Kystverket
-Haugesund • 1 måned siden
-Software developer
+Anbefalinger til deg
+Senior Frontend-utvikler
+NoA Ignite
+Oslo • Ny i dag
+Senior Backendutvikler
 Enkel søknad
-Netpower Web Solutions AS
-Sandnes • 2 uker siden
-Systemutviklere
-Veni
-Stavanger • 3 uker siden
+Checkin AS
+Kristiansand S • 2 uker siden
+Her er egenskapene flest bedrifter søker etter
+Nyttige artikler
+Utvikler
+Enkel søknad
+lilbit
+Trondheim • 1 måned siden
+Software Engineer (C/C++)
+Thales Norway AS
+Oslo • 1 måned siden
+UX-Designer
+Enkel søknad
+lilbit AS
+Trondheim • 3 uker siden
