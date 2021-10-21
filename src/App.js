@@ -10,6 +10,7 @@ import navLogo from "./assets/nav-logo-red.svg";
 function App() {
   const [input, setInput] = useState("");
   const [platform, setPlatform] = useState();
+  const [output, setOutput] = useState("");
   const textEl = useRef(null);
 
   const changehandler = () => {
@@ -20,18 +21,37 @@ function App() {
     if (input.includes("Min FINN")) {
       setPlatform("Finn");
     } else if (input.includes("NAV og samfunn")) {
-      setPlatform("Nav")
+      setPlatform("Nav");
     }
   }, [input]);
 
-  const setOutput = useCallback(() => {
+  const listPersonalia = useCallback(() => {
+    if (platform === "Finn") {
+      // finn arbeidsgiver
+      const empMeta = input.indexOf("Arbeidsgiver");
+      const adMeta = input.indexOf("Stillingstittel");
+      let difference = adMeta - empMeta - 17;
+      const employer = input.substr(empMeta + 17, difference);
+      // const advertisement = input.substr(adMeta+20)
+      // ...
+      setOutput(<><b>Arbeidsgiver:</b> {employer}</>);
+    }
+  }, [input, platform]);
+
+  // const eeeeeeeeeeeeee = useCallback(() => {
+  //   if (input.includes()) {
+
+  //   }
+  // }, [input]);
+
+  const extractValuesFromInput = useCallback(() => {
     determinePlatform();
-    // ...
-  }, [determinePlatform]);
+    listPersonalia();
+  }, [determinePlatform, listPersonalia]);
 
   useEffect(() => {
-    setOutput();
-  }, [input, setOutput]);
+    extractValuesFromInput();
+  }, [input, extractValuesFromInput]);
 
   let logo;
   if (platform === "Finn") {
@@ -40,7 +60,6 @@ function App() {
   if (platform === "Nav") {
     logo = navLogo;
   }
-
 
   return (
     <>
@@ -57,7 +76,7 @@ function App() {
             ref={textEl}
           ></textarea>
         </div>
-        <div></div>
+        <div>{output}</div>
       </div>
     </>
   );
