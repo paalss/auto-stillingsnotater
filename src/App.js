@@ -8,9 +8,10 @@ import finnLogo from "./assets/finn.png";
 import navLogo from "./assets/nav-logo-red.svg";
 
 function App() {
+  // const defaultState = ``;
   const [input, setInput] = useState("");
   const [platform, setPlatform] = useState();
-  const [output, setOutput] = useState("");
+  const [output, setOutput] = useState([]);
   const textEl = useRef(null);
 
   const changehandler = () => {
@@ -25,16 +26,35 @@ function App() {
     }
   }, [input]);
 
-  const listPersonalia = useCallback(() => {
+  const listGeneralInfo = useCallback(() => {
     if (platform === "Finn") {
-      // finn arbeidsgiver
-      const empMeta = input.indexOf("Arbeidsgiver");
-      const adMeta = input.indexOf("Stillingstittel");
-      let difference = adMeta - empMeta - 17;
-      const employer = input.substr(empMeta + 17, difference);
-      // const advertisement = input.substr(adMeta+20)
-      // ...
-      setOutput(<><b>Arbeidsgiver:</b> {employer}</>);
+      // console.log(input);
+      const breakLineBreaks = input.split("\n");
+      console.log(breakLineBreaks);
+
+      const metadata = [
+        "Arbeidsgiver",
+        "Stillingstittel",
+        "Frist",
+        "Ansettelsesform",
+      ];
+
+      const metadataIndexes = metadata.map((item) => {
+        return breakLineBreaks.findIndex((element) => element === item);
+      });
+
+      console.log(metadataIndexes);
+
+      const data = metadataIndexes.map((index) => {
+        return `**${breakLineBreaks[index]}:** ${breakLineBreaks[index + 1]}`;
+      });
+
+      console.log(data);
+
+      setOutput(data);
+
+      // const breakMultipleSpaces = input.split("    ");
+      // console.log(breakMultipleSpaces);
     }
   }, [input, platform]);
 
@@ -46,8 +66,8 @@ function App() {
 
   const extractValuesFromInput = useCallback(() => {
     determinePlatform();
-    listPersonalia();
-  }, [determinePlatform, listPersonalia]);
+    listGeneralInfo();
+  }, [determinePlatform, listGeneralInfo]);
 
   useEffect(() => {
     extractValuesFromInput();
@@ -60,6 +80,8 @@ function App() {
   if (platform === "Nav") {
     logo = navLogo;
   }
+
+  // console.info(output)
 
   return (
     <>
@@ -76,7 +98,19 @@ function App() {
             ref={textEl}
           ></textarea>
         </div>
-        <div>{output}</div>
+        <div>
+          <ul>
+            {output &&
+              output.map((line, index) => {
+                return (
+                  <li key={index}>
+                    {/* Er anti-pattern å bruke index som key */}
+                    {line}
+                  </li>
+                );
+              })}
+          </ul>
+        </div>
       </div>
     </>
   );
