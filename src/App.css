@@ -1,14 +1,25 @@
 .flex {
   display: flex;
 }
-.flex > * {
-  width: 50%;
-}
-.flex>*:nth-child(even) {
+
+.flex > *:nth-child(even) {
   background-color: #ccc;
 }
+
+.column {
+  flex-direction: column;
+}
+
+.column > *:nth-child(odd) {
+  background-color: #eee;
+}
+
+.half-width {
+  width: 50%;
+}
+
 textarea {
-  width: 90%;
+  width: 95%;
   height: 90vh;
 }
 

@@ -11,8 +11,10 @@ function App() {
   // const defaultState = ``;
   const [input, setInput] = useState("");
   const [platform, setPlatform] = useState();
-  const [output, setOutput] = useState([]);
+  const [output, setOutput] = useState(["array", "barray"]);
   const textEl = useRef(null);
+
+  console.log(output);
 
   const changehandler = () => {
     setInput(textEl.current.value);
@@ -30,7 +32,7 @@ function App() {
     if (platform === "Finn") {
       // console.log(input);
       const breakLineBreaks = input.split("\n");
-      console.log(breakLineBreaks);
+      // console.log(breakLineBreaks);
 
       const metadata = [
         "Arbeidsgiver",
@@ -43,15 +45,18 @@ function App() {
         return breakLineBreaks.findIndex((element) => element === item);
       });
 
-      console.log(metadataIndexes);
+      // console.log(metadataIndexes);
 
       const data = metadataIndexes.map((index) => {
         return `**${breakLineBreaks[index]}:** ${breakLineBreaks[index + 1]}`;
       });
 
-      console.log(data);
+      // console.log(data);
 
-      setOutput(data);
+      console.log("nå endrer vi denne");
+      setOutput((prev) => {
+        return { prev, generalInfo: data };
+      });
 
       // const breakMultipleSpaces = input.split("    ");
       // console.log(breakMultipleSpaces);
@@ -81,7 +86,7 @@ function App() {
     logo = navLogo;
   }
 
-  // console.info(output)
+  // console.info(output);
 
   return (
     <>
@@ -89,7 +94,7 @@ function App() {
         <img src={logo} alt="" />
       </div>
       <div className="flex">
-        <div>
+        <div className="half-width">
           <textarea
             name="textarea"
             id=""
@@ -98,18 +103,25 @@ function App() {
             ref={textEl}
           ></textarea>
         </div>
-        <div>
-          <ul>
-            {output &&
-              output.map((line, index) => {
-                return (
-                  <li key={index}>
-                    {/* Er anti-pattern å bruke index som key */}
-                    {line}
-                  </li>
-                );
-              })}
-          </ul>
+        <div className="flex column half-width">
+          {/* General info */}
+          <div>
+            <h2>Generell info</h2>
+            <ul>
+              {output.generalInfo &&
+                output.generalInfo.map((line, index) => {
+                  return (
+                    <li key={index}>
+                      {/* Er anti-pattern å bruke index som key */}
+                      {line}
+                    </li>
+                  );
+                })}
+            </ul>
+          </div>
+          <div>
+            <h2>Erfaring</h2>
+          </div>
         </div>
       </div>
     </>
