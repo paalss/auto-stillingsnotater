@@ -184,7 +184,8 @@ function App() {
   return (
     <>
       <div className="bar">
-        <img src={logo} alt="" />
+        {logo ? <img src={logo} alt="logo" /> : <h2>Kopier alt tekstinnhold i FINN-annonse og lim inn</h2>}
+        
       </div>
       <div className="flex row-desktop">
         <div className="half-width-desktop">
@@ -230,25 +231,30 @@ function App() {
           </div>
           <div>
             <h2>Info</h2>
+            <p>For å putte inn i Trello-card-beskrivelse</p>
             <div contentEditable>
-              <ul>
-                {output.generalInfo &&
-                  output.generalInfo.map((line, index) => {
-                    return (
-                      <li key={index}>
-                        {/* Er anti-pattern å bruke index som key */}
-                        {line}
-                      </li>
-                    );
-                  })}
-              </ul>
-              <ul>
-                {output.contactInfo &&
-                  output.contactInfo.map((line, index) => {
-                    return <li key={index}>{line}</li>;
-                  })}
-              </ul>
+              {output.generalInfo &&
+                output.generalInfo.map((line, index) => {
+                  return (
+                    <span key={index}>
+                      {/* Er anti-pattern å bruke index som key */}
+                      {line} <br />
+                    </span>
+                  );
+                })}
+
+              {output.contactInfo &&
+                output.contactInfo.map((line, index) => {
+                  return (
+                    <span key={index}>
+                      {line} <br />
+                    </span>
+                  );
+                })}
+
+              <br />
               {output.place && output.place}
+              <br />
               <br />
             </div>
           </div>
