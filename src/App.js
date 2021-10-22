@@ -74,7 +74,6 @@ function App() {
           return breakLineBreaks.findIndex(
             (element, index) => element === item && index !== skipThisIndex
           );
-
         } else {
           return breakLineBreaks.findIndex((element) => element === item);
         }
@@ -94,10 +93,24 @@ function App() {
     }
   }, [platform, input]);
 
+  const printPlace = useCallback(() => {
+    const breakLineBreaks = input.split("\n");
+    const metadata = "Kart";
+    const metadataIndex = breakLineBreaks.findIndex(
+      (element) => element === metadata
+    );
+    const place = breakLineBreaks[metadataIndex - 1];
+    console.log(place);
+    setOutput((prev) => {
+      return { ...prev, place: place };
+    });
+  }, [input]);
+
   const listInfo = useCallback(() => {
     listGeneralInfo();
     listContactInfo();
-  }, [listGeneralInfo, listContactInfo]);
+    printPlace();
+  }, [listGeneralInfo, listContactInfo, printPlace]);
 
   const printInstancesOfPhrase = useCallback(
     (phrase, dataGroup) => {
@@ -138,8 +151,6 @@ function App() {
     },
     [input]
   );
-
-  // This code is contributed by avanitrachhadiya2155
 
   // const eeeeeeeeeeeeee = useCallback(() => {
   //   if (input.includes()) {
@@ -234,13 +245,10 @@ function App() {
               <ul>
                 {output.contactInfo &&
                   output.contactInfo.map((line, index) => {
-                    return (
-                      <li key={index}>
-                        {line}
-                      </li>
-                    );
+                    return <li key={index}>{line}</li>;
                   })}
               </ul>
+              {output.place && output.place}
               <br />
             </div>
           </div>
