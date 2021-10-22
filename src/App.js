@@ -110,6 +110,8 @@ function App() {
     listGeneralInfo();
     printInstancesOfPhrase("års erfaring", "yearsExperience");
     printInstancesOfPhrase("erfaring", "experience");
+    printInstancesOfPhrase("karakter", "gradeDoc");
+    printInstancesOfPhrase("vitnemål", "diploma");
   }, [determinePlatform, listGeneralInfo, printInstancesOfPhrase]);
 
   useEffect(() => {
@@ -131,8 +133,8 @@ function App() {
       <div className="bar">
         <img src={logo} alt="" />
       </div>
-      <div className="flex">
-        <div className="half-width">
+      <div className="flex row-desktop">
+        <div className="half-width-desktop">
           <textarea
             name="textarea"
             id=""
@@ -141,21 +143,7 @@ function App() {
             ref={textEl}
           ></textarea>
         </div>
-        <div className="flex column half-width">
-          <div>
-            <h2>Generell info</h2>
-            <ul>
-              {output.generalInfo &&
-                output.generalInfo.map((line, index) => {
-                  return (
-                    <li key={index}>
-                      {/* Er anti-pattern å bruke index som key */}
-                      {line}
-                    </li>
-                  );
-                })}
-            </ul>
-          </div>
+        <div className="flex column half-width-desktop">
           <div>
             <h2>Erfaring</h2>
             {output.yearsExperience && <h3>Års erfaring</h3>}
@@ -188,10 +176,55 @@ function App() {
               })}
           </div>
           <div>
+            <h2>Generell info</h2>
+            <div>
+              <ul>
+                {output.generalInfo &&
+                  output.generalInfo.map((line, index) => {
+                    return (
+                      <li key={index}>
+                        {/* Er anti-pattern å bruke index som key */}
+                        {line}
+                      </li>
+                    );
+                  })}
+              </ul>
+              <br />
+            </div>
+          </div>
+          <div>
             <h2>Kontaktperson</h2>
           </div>
           <div>
-            <h2>Påkrevd vedlegg</h2>
+            <h2>Vedlegg</h2>
+            {output.gradeDoc && <h3>Karakter</h3>}
+            {output.gradeDoc &&
+              output.gradeDoc.map((e, index) => {
+                return (
+                  <span key={index}>
+                    {index > 0 && <hr />}
+                    <p>
+                      {e.map((line, index) => {
+                        return <span key={index}>{line}</span>;
+                      })}
+                    </p>
+                  </span>
+                );
+              })}
+            {output.diploma && <h3>Vitnemål</h3>}
+            {output.diploma &&
+              output.diploma.map((e, index) => {
+                return (
+                  <span key={index}>
+                    {index > 0 && <hr />}
+                    <p>
+                      {e.map((line, index) => {
+                        return <span key={index}>{line}</span>;
+                      })}
+                    </p>
+                  </span>
+                );
+              })}
           </div>
         </div>
       </div>

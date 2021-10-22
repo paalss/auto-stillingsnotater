@@ -6,16 +6,16 @@
   background-color: #ccc;
 }
 
+.row-desktop {
+  flex-direction: column;
+}
+
 .column {
   flex-direction: column;
 }
 
 .column > *:nth-child(odd) {
   background-color: #eee;
-}
-
-.half-width {
-  width: 50%;
 }
 
 textarea {
@@ -25,4 +25,18 @@ textarea {
 
 img {
   width: 70px;
+}
+
+h2 {
+  color: #273ae7;
+}
+
+@media only screen and (min-width: 700px) {
+  .row-desktop {
+    flex-direction: row;
+  }
+
+  .half-width-desktop {
+    width: 50%;
+  }
 }
