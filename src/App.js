@@ -75,11 +75,19 @@ function App() {
             (element, index) => element === item && index !== skipThisIndex
           );
         } else {
-          return breakLineBreaks.findIndex((element) => element === item);
+          const index = breakLineBreaks.findIndex(
+            (element) => element === item
+          );
+
+          return index !== -1 ? index : undefined; // hvis ikke fantes i dokumentet, merk det med undefined
         }
       });
 
-      const data = metadataIndexes.map((index) => {
+      const foundMetadataIndexes = metadataIndexes.filter(
+        (element) => element !== undefined
+      ); // de vi ikke fant, undefined, skal ikke være med i listen
+
+      const data = foundMetadataIndexes.map((index) => {
         return (
           <>
             <b>**{breakLineBreaks[index]}:**</b> {breakLineBreaks[index + 1]}
@@ -100,7 +108,6 @@ function App() {
       (element) => element === metadata
     );
     const place = breakLineBreaks[metadataIndex - 1];
-    console.log(place);
     setOutput((prev) => {
       return { ...prev, place: place };
     });
@@ -184,8 +191,11 @@ function App() {
   return (
     <>
       <div className="bar">
-        {logo ? <img src={logo} alt="logo" /> : <h2>Kopier alt tekstinnhold i FINN-annonse og lim inn</h2>}
-        
+        {logo ? (
+          <img src={logo} alt="logo" />
+        ) : (
+          <h2>Kopier alt tekstinnhold i FINN-annonse og lim inn</h2>
+        )}
       </div>
       <div className="flex row-desktop">
         <div className="half-width-desktop">
@@ -232,27 +242,28 @@ function App() {
           <div>
             <h2>Info</h2>
             <p>For å putte inn i Trello-card-beskrivelse</p>
-            <div contentEditable>
-              {output.generalInfo &&
-                output.generalInfo.map((line, index) => {
-                  return (
-                    <span key={index}>
-                      {/* Er anti-pattern å bruke index som key */}
-                      {line} <br />
-                    </span>
-                  );
-                })}
-
-              {output.contactInfo &&
-                output.contactInfo.map((line, index) => {
-                  return (
-                    <span key={index}>
-                      {line} <br />
-                    </span>
-                  );
-                })}
-
-              <br />
+            <div contentEditable={false}>
+              <p>
+                {output.generalInfo &&
+                  output.generalInfo.map((line, index) => {
+                    return (
+                      <span key={index}>
+                        {/* Er anti-pattern å bruke index som key */}
+                        {line} <br />
+                      </span>
+                    );
+                  })}
+              </p>
+              <p>
+                {output.contactInfo &&
+                  output.contactInfo.map((line, index) => {
+                    return (
+                      <span key={index}>
+                        {line} <br />
+                      </span>
+                    );
+                  })}
+              </p>
               {output.place && output.place}
               <br />
               <br />
