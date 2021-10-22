@@ -28,7 +28,7 @@ function App() {
     }
   }, [input]);
 
-  const listGeneralInfo = useCallback(() => {
+  const addGeneralInfoToOutput = useCallback(() => {
     if (platform === "Finn") {
       const breakLineBreaks = input.split("\n");
 
@@ -57,7 +57,7 @@ function App() {
     }
   }, [platform, input]);
 
-  const listContactInfo = useCallback(() => {
+  const addContactInfoToOutput = useCallback(() => {
     if (platform === "Finn") {
       const breakLineBreaks = input.split("\n");
 
@@ -93,7 +93,7 @@ function App() {
     }
   }, [platform, input]);
 
-  const printPlace = useCallback(() => {
+  const addPlaceToOutput = useCallback(() => {
     const breakLineBreaks = input.split("\n");
     const metadata = "Kart";
     const metadataIndex = breakLineBreaks.findIndex(
@@ -106,13 +106,13 @@ function App() {
     });
   }, [input]);
 
-  const listInfo = useCallback(() => {
-    listGeneralInfo();
-    listContactInfo();
-    printPlace();
-  }, [listGeneralInfo, listContactInfo, printPlace]);
+  const setInfoToOutput = useCallback(() => {
+    addGeneralInfoToOutput();
+    addContactInfoToOutput();
+    addPlaceToOutput();
+  }, [addGeneralInfoToOutput, addContactInfoToOutput, addPlaceToOutput]);
 
-  const printInstancesOfPhrase = useCallback(
+  const addInstancesOfPhraseToOutput = useCallback(
     (phrase, dataGroup) => {
       if (input.includes(phrase)) {
         const phraseIndex = input.indexOf(phrase);
@@ -160,12 +160,12 @@ function App() {
 
   const extractValuesFromInput = useCallback(() => {
     determinePlatform();
-    listInfo();
-    printInstancesOfPhrase("års erfaring", "yearsExperience");
-    printInstancesOfPhrase("erfaring", "experience");
-    printInstancesOfPhrase("karakter", "gradeDoc");
-    printInstancesOfPhrase("vitnemål", "diploma");
-  }, [determinePlatform, listInfo, printInstancesOfPhrase]);
+    setInfoToOutput();
+    addInstancesOfPhraseToOutput("års erfaring", "yearsExperience");
+    addInstancesOfPhraseToOutput("erfaring", "experience");
+    addInstancesOfPhraseToOutput("karakter", "gradeDoc");
+    addInstancesOfPhraseToOutput("vitnemål", "diploma");
+  }, [determinePlatform, setInfoToOutput, addInstancesOfPhraseToOutput]);
 
   useEffect(() => {
     extractValuesFromInput();
@@ -230,7 +230,7 @@ function App() {
           </div>
           <div>
             <h2>Info</h2>
-            <div>
+            <div contentEditable>
               <ul>
                 {output.generalInfo &&
                   output.generalInfo.map((line, index) => {
