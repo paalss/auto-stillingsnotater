@@ -55,7 +55,49 @@ function App() {
         return { ...prev, generalInfo: data };
       });
     }
-  }, [input, platform]);
+  }, [platform, input]);
+
+  const listContactInfo = useCallback(() => {
+    if (platform === "Finn") {
+      const breakLineBreaks = input.split("\n");
+
+      const metadata = ["Kontaktperson", "Stillingstittel", "Mobil", "Telefon"];
+
+      const metadataIndexes = metadata.map((item) => {
+        // Stillingstittel står tidligere i annonsen også,
+        // men det er ikke den vi skal hente. Koden skal finne DEN ANDRE instansen
+        let skipThisIndex = -1;
+        if (item === "Stillingstittel") {
+          skipThisIndex = breakLineBreaks.findIndex(
+            (element) => element === item
+          );
+          return breakLineBreaks.findIndex(
+            (element, index) => element === item && index !== skipThisIndex
+          );
+
+        } else {
+          return breakLineBreaks.findIndex((element) => element === item);
+        }
+      });
+
+      const data = metadataIndexes.map((index) => {
+        return (
+          <>
+            <b>**{breakLineBreaks[index]}:**</b> {breakLineBreaks[index + 1]}
+          </>
+        );
+      });
+
+      setOutput((prev) => {
+        return { ...prev, contactInfo: data };
+      });
+    }
+  }, [platform, input]);
+
+  const listInfo = useCallback(() => {
+    listGeneralInfo();
+    listContactInfo();
+  }, [listGeneralInfo, listContactInfo]);
 
   const printInstancesOfPhrase = useCallback(
     (phrase, dataGroup) => {
@@ -107,12 +149,12 @@ function App() {
 
   const extractValuesFromInput = useCallback(() => {
     determinePlatform();
-    listGeneralInfo();
+    listInfo();
     printInstancesOfPhrase("års erfaring", "yearsExperience");
     printInstancesOfPhrase("erfaring", "experience");
     printInstancesOfPhrase("karakter", "gradeDoc");
     printInstancesOfPhrase("vitnemål", "diploma");
-  }, [determinePlatform, listGeneralInfo, printInstancesOfPhrase]);
+  }, [determinePlatform, listInfo, printInstancesOfPhrase]);
 
   useEffect(() => {
     extractValuesFromInput();
@@ -176,7 +218,7 @@ function App() {
               })}
           </div>
           <div>
-            <h2>Generell info</h2>
+            <h2>Info</h2>
             <div>
               <ul>
                 {output.generalInfo &&
@@ -189,11 +231,18 @@ function App() {
                     );
                   })}
               </ul>
+              <ul>
+                {output.contactInfo &&
+                  output.contactInfo.map((line, index) => {
+                    return (
+                      <li key={index}>
+                        {line}
+                      </li>
+                    );
+                  })}
+              </ul>
               <br />
             </div>
-          </div>
-          <div>
-            <h2>Kontaktperson</h2>
           </div>
           <div>
             <h2>Vedlegg</h2>
