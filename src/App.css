@@ -20,7 +20,7 @@
 
 textarea {
   width: 95%;
-  height: 90vh;
+  height: 30vh;
 }
 
 img {
@@ -31,12 +31,16 @@ h2 {
   color: #273ae7;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 800px) {
   .row-desktop {
     flex-direction: row;
   }
 
   .half-width-desktop {
     width: 50%;
+  }
+
+  textarea {
+    height: 90vh;
   }
 }
