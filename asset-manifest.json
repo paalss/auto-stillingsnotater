@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/auto-stillingsnotater/static/css/main.0dae2435.chunk.css",
+    "main.js": "/auto-stillingsnotater/static/js/main.fedb6e4e.chunk.js",
+    "main.js.map": "/auto-stillingsnotater/static/js/main.fedb6e4e.chunk.js.map",
+    "runtime-main.js": "/auto-stillingsnotater/static/js/runtime-main.f8d50208.js",
+    "runtime-main.js.map": "/auto-stillingsnotater/static/js/runtime-main.f8d50208.js.map",
+    "static/js/2.e1f7e1ef.chunk.js": "/auto-stillingsnotater/static/js/2.e1f7e1ef.chunk.js",
+    "static/js/2.e1f7e1ef.chunk.js.map": "/auto-stillingsnotater/static/js/2.e1f7e1ef.chunk.js.map",
+    "static/js/3.8b59a867.chunk.js": "/auto-stillingsnotater/static/js/3.8b59a867.chunk.js",
+    "static/js/3.8b59a867.chunk.js.map": "/auto-stillingsnotater/static/js/3.8b59a867.chunk.js.map",
+    "index.html": "/auto-stillingsnotater/index.html",
+    "static/css/main.0dae2435.chunk.css.map": "/auto-stillingsnotater/static/css/main.0dae2435.chunk.css.map",
+    "static/js/2.e1f7e1ef.chunk.js.LICENSE.txt": "/auto-stillingsnotater/static/js/2.e1f7e1ef.chunk.js.LICENSE.txt",
+    "static/media/finn.4fd1d574.png": "/auto-stillingsnotater/static/media/finn.4fd1d574.png",
+    "static/media/nav-logo-red.d017d18d.svg": "/auto-stillingsnotater/static/media/nav-logo-red.d017d18d.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f8d50208.js",
+    "static/js/2.e1f7e1ef.chunk.js",
+    "static/css/main.0dae2435.chunk.css",
+    "static/js/main.fedb6e4e.chunk.js"
+  ]
+}
