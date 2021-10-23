@@ -194,7 +194,7 @@ function App() {
         {logo ? (
           <img src={logo} alt="logo" />
         ) : (
-          <h2>Kopier alt sideinnhold i FINN-annonse (ctrl a) og lim inn</h2>
+          <h2>Kopier alt sideinnhold i FINN-annonse (ctrl a) og lim inn under</h2>
         )}
       </div>
       <div className="flex row-desktop">
