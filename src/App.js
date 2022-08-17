@@ -21,7 +21,7 @@ function App() {
   };
 
   const determinePlatform = useCallback(() => {
-    if (input.includes("Min FINN")) {
+    if (input.includes("Gå til annonsen")) {
       setPlatform("Finn");
     } else if (input.includes("NAV og samfunn")) {
       setPlatform("Nav");

@@ -1,150 +1,121 @@
-
-Gå til annonsen
-Mulighetenes marked
-Varslinger
-Ny annonse
-Meldinger
 Min FINN
-Inaktiv
-Senior backend-utvikler til aID-teamet i Amedia
+Gå til annonsen
+Jobb Ledige stillinger Oslo Sentrum
+We are looking for an experienced developer to help us build the next generation marketplace
 
 Arbeidsgiver
-    Amedia Utvikling AS
+    FINN.no
 Stillingstittel
-    System utvikler
+    Developer Team Fraud
 Frist
-    Løpende
+    21.08.2022
 Ansettelsesform
     Fast
 
-Hvorfor jobbe i aID-teamet?
+Bli kjent med FINN.no
 
-I Amedia ID og Data jobber vi med produkter som påvirker over en million nordmenn hver dag - deriblant vår identitetsløsning, aID. Vår ambisjon er å utvikle aID til å bli den største og viktigste identitets- og innloggingsløsningen i Norge. En stor del av jobben vår er å lage en brukervennlig, personvernvennlig og trygg løsning for alle våre brukere og nettsteder.
+We are looking for an experienced developer to help us build the next generation marketplace!
 
-aID-løsningene består av egenutviklede applikasjoner i en mikrotjenestearkitektur. De er moderne og godt oppdaterte og teamet sørger selv for forvaltning, videreutvikling, testing og utrulling av tjenestene. I dag inkluderer stacken vår apper basert på blant annet Java, Ruby, Go, Node.js og React/Redux, og vi baserer oss på Open Source-teknologier som Docker og Kubernetes for å kjøre tjenestene og Varnish som lastbalanserer.
+About FINN Tech
 
-Det som motiverer oss som jobber her, er blant annet at:
+Every week, FINN torget has more than 2 million unique visitors, and thousands of items get a new home every year. In 2019, these users saved the planet 550,000 tons in CO2 emissions by buying used items. That is the equivalent of all traffic in Oslo for 10 months. Environmental considerations are an increasingly important motivational factor for buying and selling used items.
 
-    våre tjenester har en stor brukerbase, alt vi gjør påvirker mange mennesker
-    vi har stor variasjon når det kommer til teknologi og stor frihet innenfor vide rammer
-    vi er raske til å ta i bruk ny teknologi når det løser problemer mer effektivt enn den vi bruker fra før
-    det er svært gode muligheter for å påvirke både produkt, arkitektur og prosesser
-    det er enkelt og ubyråkratisk å kunne bidra der man selv føler at det trengs (applikasjoner/tjenester, arkitektur, infrastruktur, oppsett, overvåking, etc)
-    vi samarbeider i et tverrfaglig team som jobber sammen og tar vare på arbeidsmiljøet
+About the position
 
-...og alt dette selvsagt i tillegg til det faktum at jobben vi gjør bidrar til å holde lokaljournalistikken i live - som i sin tur er viktig for samfunnet og lokaldemokratiet!
+We are looking for a Java developer to strengthen the team responsible for developing the tools for preventing fraud and rule violations on FINN. Making sure that FINN is a safe marketplace for our users is of utmost importance to us, and we are constantly making improvements to prevent fraud and malevolent use of our services. Team Consumer Safety manages and develops systems for ad and message moderation. This is done through automatic review using machine learning and rules, as well as tools used for manual moderation.
 
+We are looking for a developer with experience in Java and Java technologies/frameworks. We want to expand our use of machine learning, so any knowledge or interest in ML is a great advantage. You should also expect to handle some frontend tasks from time to time, but this is not where the bulk of your time will be spent, and we do not expect you to be an experienced frontend developer.
 
-Hvem er vi på jakt etter?
+We are a small independent team working closely together, where everyone’s opinions are highly valued. As a developer in Team Consumer Safety you will work with the other developers discussing technical solutions and ways to handle new challenges that arise. When working independently, you will reach out to our stakeholders for input or opinions, trying to find the best solutions for their needs. We have a culture for helping each other and you will ask for help, and help others when they need it.
 
-Vi leter etter deg som har jobbet i noen år og er komfortabel med back-end, har god kunnskap om Java rammeverk og holder deg oppdatert på ny teknologi. Selv om du kanskje har et favorittspråk eller to, ønsker du alltid å bruke det språket eller den teknologien som passer best til den aktuelle oppgaven. Erfaring med Linux er et pluss. (Humor kommer også godt med! :D)
+You will work with people from the whole organization and make new friends either through your daily work or participation in our many social events; like our awesome yearly kick off trip.
 
-Arbeidsoppgaver:
+Fraud and consumer safety is an ever changing domain with new and interesting challenges regularly; as a member of the team you will see sides of FINN that few other people get the chance to.
 
-    Utvikle og videreutvikle aID-tjenestene
-    Forbedre arkitektur, prosesser og løsninger slik at vi sikrer en moderne, fleksibel og skalerbar løsning
-    Spre innsikt og dele din kompetanse - sammen bidrar vi til at teamet vokser faglig
+Technical qualifications
 
-Ønskeliste erfaring og egenskaper:
+    Knowledge of Java and the JVM platform
+    Experience with any of the following or similar is an advantage:
+        Git, Kubernetes, PostgreSQL,Kafka, Spring, Kotlin, JavaScript, React
+        Machine learning with Python for an added advantage
+    Experience working in an agile environment (Scrum, Kanban etc)
+    Proficient in English - written and spoken
 
-    Utdanning på bachelor- eller masternivå innen informatikk eller tilsvarende
-    Fra 3 års erfaring som backend- eller fullstackutvikler
-    God erfaring med Java (eventuelt GO, Ruby, Node.js), Spring Rammeverk og databaser
-    Opptatt av å lage solide løsninger som er vedlikeholdbare og fleksible
-    Evne til å være pragmatisk, prioritere og levere også når tidsfristene er stramme
-    Liker varierte og skiftende oppgaver, trives med nye utfordringer
-    Du er opptatt av å lære, har evne til å sette deg raskt inn i nye teknologier og du liker å diskutere kode
-    Nysgjerrig på ny og ukjent teknologi
-    Evne til å vurdere om språk/teknologier er godt egnet til å løse et gitt problem, både på kort og lang sikt
+Personal qualifications
 
-Hvis du føler at dette traff veldig godt, men er usikker på kvalifikasjonene - ta kontakt likevel!
+    You are motivated by engaging in a variety of tasks, depending on the needs within the team
 
- 
-Hos oss får du:
+    You should have a genuine interest in our products and end-user needs
 
-    Mange engasjerte kollegaer å samarbeide med, lære fra og lære til - for øyeblikket 13 utviklere i avdelingen og over 20 utviklere i vår søsteravdeling Utvikling, i tillegg til alt fra Data Scientists til BI-eksperter og UX-ere
-    Stor mulighet til å påvirke alle våre produkter og alle deler av utviklingsprosessen
-    Tid og budsjett til faglig påfyll
-    Konkurransedyktige betingelser og god balanse mellom jobb og privatliv
-    Moderne lokaler i Akersgata, midt i hjertet av Oslo
-    En glimrende kantine med varm mat hver dag :)
+    You display a high degree of effective, proactive communication, both verbally and in written form
 
+    You take responsibility for your work and reach a hand out to colleagues when needed
 
-Om arbeidsgiveren:
-Amedia Utvikling er konsernets sentrale utviklingsmiljø med ansvar for både teknisk og
-innholdsmessig utvikling. Selskapet forvalter blant annet Amedias rammeverk for
-nettaviser, påloggingstjenesten aID, direktesport og konsernets eAviser.
+    You are passionate about your area of work
 
-Fra Akersgata i Oslo sentrum jobber vi med 73 lokalaviser – fra Honningsvåg i nord til
-Tvedestrand i sør. I tillegg eier Amedia den riksdekkende Nettavisen. Til sammen når
-konsernets medier ut til 2,2 millioner nordmenn. Hver eneste uke.
+    You always consider what’s best for the company when making technology decisions
 
-Stadig flere kjøper abonnement på våre aviser. Det er en tillit som forplikter. Derfor søker vi
-utviklere som skal være med på å utvikle nye, digitale tjenester som får journalistikken til å
-skinne. Det kan være ganske store ting: Mobilapper, personaliserte forsider, streaming av
-sportssendinger, infrastruktur eller nye arbeidsverktøy for journalister. Men også litt mindre ting, som å forbedre måten vi viser fram bildeserier på, eller muligheten til å motta nyhetsbrev med de viktigste nyhetene.
+    You are a natural and effective problem solver. This requires a solution oriented mindset, even in challenging situations
 
-Amedia er landets største utgiver av lokale medier. Forretningsideen er den samme i dag som den alltid har vært: Journalistikken. Vi skal fortelle de små og store historiene som samler, engasjerer, og driver lokalsamfunnet fremover.
+    You are a team player and have a good culture fit with our team and company
 
-Amedia Utvikling er et selskap i Amedia. Les mer her om hvordan det å være ansatt i Amedia.
+The FINN Technology Organization
 
-Kontakt Kjetil Ramdal; +4794139901 kjetil@vbemanning.no
- 
+Our innovative and high performing engineering unit of 200+ developers is a large part of our success story. Increased international competition, changing user behavior and emerging technology constantly keep us on our toes. We are already heavily invested in micro services, data pipelines & eventual consistency, machine learning, domain driven design, and we deploy changes to production more than a thousand times every week We try to maintain a high degree of autonomy in our teams, and they are largely free to choose which technologies are best suited for their tasks.
+
+We also offer competitive terms and many cool benefits, such as festive trips to build spirit and create good experiences, cabins in Trysil, and Aftenposten delivered to your door or online. We care for our employees wellbeing and offer weekly training sessions at SATS, cross-country skiing courses during winter, and massage service available every day in the office. We are super proud of our newly renovated offices in Grensen, and often invite other people in the industry to our office for either professional or casual events. We think you will thrive and do better with flexible working hours and we offer a hybrid solution where you have the possibility of working from home (or somewhere else) for 1-3 days a week.
+
+Does this sound interesting? Apply directly through the application link, or reach out to Engineering Manager for Team Fraud Andre Martins if you would like to hear more about the role.
 Om arbeidsgiveren
 
-Veksthuset Bemanning AS er et rekrutteringsselskap med spesialkunnskap på personalutleie og rekruttering innen salg, produksjon, håndverk, ledelse, økonomi/regnskap, samt administrative funksjoner i offentlig og privat sektor. Selskapet, med hovedkontor i Oslo og avdelingskontor i Elverum, Hamar, Brumunddal, Trondheim, Otta og Vestfold, samarbeider tett med attraktive bedrifter i disse områdene. Mer informasjon på www.vbemanning.no
+In 2022, FINN turns 22 years old. During this time, almost every Norwegian has tested our service. Every year, every Norwegian spends an average of 30 hours on FINN, and in total, our users surf through more than 15 billion pages. Talk about an engaging gang! A career at FINN ensures you many good stories at a party. It’s a brand 96% of Norway's population knows, and our reputation is one of Norway's strongest. In FINN, we go to work every day to help people make smart choices for themselves and society.
+
+FINN is owned by Schibsted and our more than 400 pleasant colleagues are located in Grensen in Oslo. As we have implemented a hybrid solution, some are working from home and some are working in our newly renovated office. We are proud that FINN has been named one of Norway's best workplaces for several years in a row in the Great Place to Work award. Those who know us know that we have a set of values that characterize us in everything we do: DRIVE, PRECISION, TOLERANCE, and SPIRIT.
 
 Nettverk
     Facebook LinkedIn Twitter 
 Sektor
     Privat
 Sted
-    Akersgata 34, 0180 Oslo
+    Grensen 5-7, Oslo, Norway, 0159 Oslo
 Bransje
-    IT - programvare
+    Internettbaserte tjenester,
+    IT
 Stillingsfunksjon
+    IT utvikling / Full stack utvikler,
     IT utvikling / Utvikler (generell)
 
-Veksthuset Bemanning AS
+Nøkkelord
+
+developer, utvikler, fullstack, backend, IT
+Galleribilde 1 av 4
+
+(1/4)
+FINN NO AS
 Spørsmål om stillingen
 
 Kontaktperson
-    Kjetil Ramdal
+    Andre Martins
+Stillingstittel
+    Engineering Manager
 Telefon
-    941 39 901 
+    484 04 241 
 
     Send melding
 
-    Hjemmeside
-
-341 følger dette firmaet
-Akersgata 34, 0180 Oslo
+Søk her
+2455 følger dette firmaet
+Les om arbeidsplassen
+Flere stillinger
+Hjemmesiden vår
+Les tech bloggen vår
+Company branding
+Grensen 5-7, Oslo, Norway, 0159 Oslo
 Kart
 
 Stort kart Hybridkart Flyfoto
 Annonseinformasjon
-FINN-kode 	181679838
-Sist endret 	10. jun. 2020 14:52
+FINN-kode 	267464584
+Sist endret 	3. aug. 2022 23:01
 
 Rapporter annonse
-Anbefalinger til deg
-Senior Frontend-utvikler
-NoA Ignite
-Oslo • Ny i dag
-Senior Backendutvikler
-Enkel søknad
-Checkin AS
-Kristiansand S • 2 uker siden
-Her er egenskapene flest bedrifter søker etter
-Nyttige artikler
-Utvikler
-Enkel søknad
-lilbit
-Trondheim • 1 måned siden
-Software Engineer (C/C++)
-Thales Norway AS
-Oslo • 1 måned siden
-UX-Designer
-Enkel søknad
-lilbit AS
-Trondheim • 3 uker siden
