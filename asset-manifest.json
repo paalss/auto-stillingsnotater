@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/auto-stillingsnotater/static/css/main.0dae2435.chunk.css",
-    "main.js": "/auto-stillingsnotater/static/js/main.9034ae5c.chunk.js",
-    "main.js.map": "/auto-stillingsnotater/static/js/main.9034ae5c.chunk.js.map",
+    "main.js": "/auto-stillingsnotater/static/js/main.1daa0845.chunk.js",
+    "main.js.map": "/auto-stillingsnotater/static/js/main.1daa0845.chunk.js.map",
     "runtime-main.js": "/auto-stillingsnotater/static/js/runtime-main.f8d50208.js",
     "runtime-main.js.map": "/auto-stillingsnotater/static/js/runtime-main.f8d50208.js.map",
     "static/js/2.e1f7e1ef.chunk.js": "/auto-stillingsnotater/static/js/2.e1f7e1ef.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.f8d50208.js",
     "static/js/2.e1f7e1ef.chunk.js",
     "static/css/main.0dae2435.chunk.css",
-    "static/js/main.9034ae5c.chunk.js"
+    "static/js/main.1daa0845.chunk.js"
   ]
 }
